@@ -1,13 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Greeting from"./Greeting";
+import Counter from './Counter';
+import List from './List';
 
 function App() {
+
+  const list = ['Ben', 'Helen', 'Anna']
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <h1>Hello, world!</h1>
+        <Greeting name="Tharshika"/>
+        <Counter />
+        <List menuitems={list}/>
         </p>
         <a
           className="App-link"
@@ -23,3 +31,4 @@ function App() {
 }
 
 export default App;
+// 
