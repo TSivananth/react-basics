@@ -4,16 +4,15 @@ import _ from 'lodash';
 function List(props) {
   const [list, setList] = useState(props.menuitems);
 
+  console.log(list)
+
   function handleRemove(index) {
     const newList = list.filter((_, i) => i !== index);
     setList(newList);
   }
 
 
-  let listOrder = _.orderBy(list, ['name'], ['asc']);
-
-
-  const listItems = list.map((name, index) => (
+  const listItems = list.sort().map((name, index) => (
     
     <li key={index} className='li'>
       {name}
@@ -24,8 +23,6 @@ function List(props) {
       
     </li>
   ));
-  
- 
 
   return (
     <ol>
